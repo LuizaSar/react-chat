@@ -83,6 +83,9 @@
 .messages_chat:first-child {
     margin-top: 50px;
 }
+.messages_chat:last-child {
+    margin-bottom: 80px;
+}
 .incoming_message_body, .outgoing_message_body {
     max-width: 80%;
     clear: both;
@@ -147,4 +150,32 @@
 }
 .message_time {
     font-size: 14px;
+}
+
+.input_form {
+    border-top: 1px solid #f0edf7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 55%;
+    z-index: 1000;
+    background-color: #fff;
+}
+.input_form input{
+    display: block;
+    outline: none;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    color: #444444;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+}
+.input_attach, .input_mic{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #b8b7bd;
 }
