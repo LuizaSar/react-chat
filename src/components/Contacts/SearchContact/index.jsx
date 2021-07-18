@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Contacts.module.css'
+import styles from '../Contacts.module.css'
 
 function SearchContact (props) {
   return (
