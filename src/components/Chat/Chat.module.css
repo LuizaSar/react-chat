@@ -88,14 +88,16 @@
 }
 .incoming_message_body, .outgoing_message_body {
     max-width: 80%;
+    min-width: 15%;
     clear: both;
     position: relative;
 }
-.message_incoming {
+.message_incoming, .message_outgoing  {
     display: flex;
     align-items: center;
-    margin: 20px 0;
+    margin: 10px 0;
 }
+
 .message_avatar, .message_avatar img  {
     height: 50px;
     border-radius: 50%;
