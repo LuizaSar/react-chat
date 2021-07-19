@@ -5,10 +5,10 @@ function ContactInfo (props) {
   return (
     <div className={styles.contact_info}>
       <div className={styles.contact_avatar}>
-        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBiZIu0fTiXNXQKOeZRYpyKQN1ZBSANcl28A&usqp=CAU' alt='' />
+        {props.contact.fullname.substring(0,1)}
       </div>
-      <div className={styles.contact_name}>Кудузов Ахмад</div>
-      <div className={styles.contact_link}>@kuduzow</div>
+      <div className={styles.contact_name}>{props.contact.fullname}</div>
+      <div className={styles.contact_link}>{`@${props.contact.username}`}</div>
       <div className={styles.contact_buttons}>
         <button className={styles.contact_call}>
         <span className="material-icons">call</span>

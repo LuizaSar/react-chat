@@ -23,9 +23,6 @@ export default function messages(state = initialState, action) {
 }
 
 export  function loadMessages(myId, contactId) {
-  console.log(myId)
-  console.log(contactId)
-
   return (dispatch) => {
     dispatch({
       type: 'messages/load/start',

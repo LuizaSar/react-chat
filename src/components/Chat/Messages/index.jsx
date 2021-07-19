@@ -20,12 +20,13 @@ function Messages (props) {
   const messages = useSelector(state => {
     return state.messages.items
   })
+
   const loadingMessages = useSelector(state => {
     return state.messages.loading
   })
 
   if(loadingMessages) {
-    return null
+    return  <div/>
   }
   else return (
     <div>

@@ -5,11 +5,11 @@ import Messages from './Messages';
 import InputField from './InputField';
 
 function Chat(props) {
-  return <div className={styles.container}>
-    <Header/>
-    <Messages/>
-    <InputField/>
-  </div>;
+    return <div className={styles.container}>
+      <Header/>
+      <Messages/>
+      <InputField/>
+    </div>;
 }
 
 export default Chat;

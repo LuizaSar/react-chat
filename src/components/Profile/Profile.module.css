@@ -10,10 +10,18 @@
 .contact_info {
     text-align: center;
 }
-.contact_avatar, .contact_avatar img  {
-    width: 100px;
+.contact_avatar  {
+    border-radius: 100px;
+    font-size: 50px;
+    padding: 0 25px;
     height: 100px;
-    border-radius: 50%;
+    background-image: linear-gradient(to right bottom, #98d7ff, #47baff, #0099ff, #0073ff, #0043ff);
+    width: 100px;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
     margin: 0 auto;
 }
 .contact_name{

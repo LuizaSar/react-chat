@@ -1,5 +1,5 @@
 const initialState = {
-  item: {},
+  item: JSON.parse(localStorage.getItem('application')) || {},
   loading:false
 };
 
@@ -31,6 +31,7 @@ export  function loadProfile() {
         return response.json();
       })
       .then((json) => {
+        localStorage.setItem('application', JSON.stringify(json));
         return dispatch({
           type: 'profile/load/success',
           payload: json,

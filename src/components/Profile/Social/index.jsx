@@ -10,15 +10,15 @@ function Social (props) {
       <div className={styles.social_block}>
         <div className={styles.social_wrap}>
           <FiInstagram className={styles.social_instagram} />
-          <span className={styles.social_name}>kuduzow</span>
+          <span className={styles.social_name}>{props.contact.username}</span>
         </div>
         <div className={styles.social_wrap}>
           <AiOutlineTwitter className={styles.social_twitter}/>
-          <span className={styles.social_name}>kuduzow</span>
+          <span className={styles.social_name}>{props.contact.username}</span>
         </div>
         <div className={styles.social_wrap}>
           <AiFillFacebook className={styles.social_facebook}/>
-          <span className={styles.social_name}>kuduzow</span>
+          <span className={styles.social_name}>{props.contact.username}</span>
         </div>
       </div>
     </div>

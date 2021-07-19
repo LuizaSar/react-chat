@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 function Contact (props) {
   return (
-    <NavLink to={`/${props.contact._id}`}>
+    <NavLink to={`/${props.contact._id}`} activeClassName={styles.contact_selected}>
     <li>
     <div className={styles.contact_wrap}>
       <div className={styles.contact_img}>
