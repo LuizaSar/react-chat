@@ -22,6 +22,9 @@
     padding-left: 0;
     margin-bottom: 0;
 }
+a {
+    text-decoration: none;
+}
 .search_form {
     background-color:#f0edf7;
     padding: 5px 10px;
@@ -48,15 +51,24 @@
     align-items: center;
     transition: all ease 0.3s;
     padding: 10px 5px;
+    text-decoration: none;
 }
 .contact_wrap:hover {
     background-color: #d9d9d9;
     cursor: pointer;
 }
-.contact_img img {
+.contact_img {
     border-radius: 50px;
-    height: 50px;
-    width: 50px;
+    font-size: 30px;
+    padding: 0 25px;
+    height: 60px;
+    background-image: linear-gradient(to right bottom, #98d7ff, #47baff, #0099ff, #0073ff, #0043ff);
+    width: 60px;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 .contact_main {
     width: 100%;
@@ -71,7 +83,12 @@
 }
 .contact_text {
     color: #4a4a4a;
+    width: 130px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
-.contact_time {
+.contact_time  {
     font-size: 14px;
+    color: #4a4a4a;
 }
