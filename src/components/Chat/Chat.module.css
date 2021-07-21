@@ -196,6 +196,18 @@
     margin-bottom: 10px;
     font-size: 16px;
 }
+.message_status {
+    margin-right: 8px;
+}
+
+.message_status div{
+    font-size: 14px;
+
+}
+.message_sub {
+    display: flex;
+    align-items: center;
+}
 .message_time {
     font-size: 14px;
 }

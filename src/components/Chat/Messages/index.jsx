@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import styles from '../Chat.module.css'
-import Message from './Message';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadMessages } from '../../../redux/ducks/messages';
 import { useParams } from 'react-router-dom';
+import Message from './Message/Message';
 
 
 function Messages (props) {
