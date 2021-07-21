@@ -12,7 +12,6 @@ function Messages (props) {
   const myId = useSelector(state => {
     return state.application.item._id
   })
-
   useEffect(() => {
     dispatch(loadMessages(myId, contactId));
   }, [dispatch, contactId, myId]);
@@ -29,9 +28,9 @@ function Messages (props) {
     return  <div/>
   }
   else return (
-    <div>
+    <div className={styles.messages_chat}>
       {messages.map(message=>{
-        return <Message message={message} myId={myId}/>
+        return <Message message={message} myId={myId} contactId={contactId}/>
       })}
     </div>
   );

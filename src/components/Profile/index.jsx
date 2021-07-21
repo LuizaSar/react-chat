@@ -10,16 +10,17 @@ function Profile (props) {
   const contactId = useParams().id;
   const contacts = useSelector(state => {
     return state.contacts.items
-  })
-  const contactsLoading = useSelector(state => {
-    return state.contacts.loading
-  })
+  });
   const contact = contacts.filter(contact=>{
     if(contactId === contact._id) {
       return true
     }
     return false
+  });
+  const contactsLoading = useSelector(state => {
+    return state.contacts.loading
   })
+
 
   if(contactsLoading) {
     return  <div/>
