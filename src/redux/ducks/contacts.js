@@ -1,6 +1,7 @@
 const initialState = {
   items:[],
-  loading:false
+  loading:false,
+  searchContact:''
 };
 
 export default function contacts(state = initialState, action) {
@@ -15,6 +16,11 @@ export default function contacts(state = initialState, action) {
         ...state,
         items:action.payload,
         loading: false
+      }
+    case 'contacts/search/set':
+      return {
+        ...state,
+        searchContact: action.payload
       }
     default:
       return state;
@@ -36,5 +42,11 @@ export  function loadContacts() {
           payload: json,
         });
       });
+  };
+}
+export function setSearchContact(text) {
+  return {
+    type: 'contacts/search/set',
+    payload: text,
   };
 }

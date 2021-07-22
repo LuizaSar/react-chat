@@ -1,9 +1,21 @@
 .container {
     width: 20%;
+    height: 100vh;
     background-color:#f0edf7;
     padding: 40px 30px;
     overflow-y: scroll;
+    right: -20%;
+    position:fixed;
+    z-index:1000;
+    /* Animation  */
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
+.slideout {
+    right: 0px !important;
+}
+
 .container::-webkit-scrollbar {
     width:0;
 }

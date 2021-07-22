@@ -19,18 +19,28 @@ function Messages (props) {
   const messages = useSelector(state => {
     return state.messages.items
   })
+  const search = useSelector(state => {
+    return state.messages.searchMessage
+  })
+  const filteredMessages = messages.filter((item) => {
+    if (item.content.indexOf(search) > -1) {
+      return true;
+    }
+    return false;
+  });
 
   const loadingMessages = useSelector(state => {
     return state.messages.loading
   })
 
   if(loadingMessages) {
-    return  <div/>
-  }
+    return  (
+   <div/>
+    )}
   else return (
     <div className={styles.messages_chat}>
-      {messages.map(message=>{
-        return <Message message={message} myId={myId} contactId={contactId}/>
+      {filteredMessages.map((message, key)=>{
+        return <Message message={message} myId={myId} contactId={contactId} key={key}/>
       })}
     </div>
   );

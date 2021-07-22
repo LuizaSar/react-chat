@@ -15,14 +15,24 @@ function Contacts (props) {
   const contacts = useSelector(state => {
     return state.contacts.items
   })
+  const search = useSelector(state => {
+    return state.contacts.searchContact
+  })
+
+  const filteredContacts = contacts.filter((item) => {
+    if (item.fullname.indexOf(search) > -1) {
+      return true;
+    }
+    return false;
+  });
 
   return (
     <div className={styles.container}>
-      <SearchContact/>
+      <SearchContact contacts={contacts}/>
       <ul className={styles.contacts_list}>
-        {contacts.map((contact)=>{
+        {filteredContacts.map((contact, key)=>{
           return (
-            <Contact contact={contact}/>
+            <Contact contact={contact} key={key}/>
           )
         })}
       </ul>

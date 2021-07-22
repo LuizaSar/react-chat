@@ -6,6 +6,7 @@ import Profile from '../Profile';
 import { Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { loadProfile } from '../../redux/ducks/application';
+import StartPage from '../StartPage';
 
 
 function App(props) {
@@ -16,10 +17,12 @@ function App(props) {
 
   return (
     <div className={styles.container}>
-      <Route path={'/:id?'}>
+      <Route exact path={'/'}>
         <Contacts/>
+        <StartPage/>
       </Route>
       <Route exact path={'/:id'}>
+        <Contacts/>
         <Chat/>
         <Profile/>
       </Route>

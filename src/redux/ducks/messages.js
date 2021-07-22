@@ -3,6 +3,8 @@ const initialState = {
   loading: false,
   addingMessage: false,
   deletingMessageId: null,
+  searchMessage:'',
+  toggle:false
 };
 
 export default function messages(state = initialState, action) {
@@ -61,6 +63,16 @@ export default function messages(state = initialState, action) {
           return message;
         }),
       };
+    case 'messages/search/set':
+      return {
+        ...state,
+        searchMessage: action.payload
+      };
+    case 'toggle/set':
+      return {
+        ...state,
+        toggle:!(state.toggle)
+      }
 
     default:
       return state;
@@ -135,5 +147,16 @@ export function deleteMessage(id) {
           payload: id,
         });
       });
+  };
+}
+export function setSearchMessage(text) {
+  return {
+    type: 'messages/search/set',
+    payload: text,
+  };
+}
+export function setToggle() {
+  return {
+    type: 'toggle/set',
   };
 }

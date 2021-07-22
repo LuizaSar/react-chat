@@ -17,18 +17,17 @@ function Profile (props) {
     }
     return false
   });
-  const contactsLoading = useSelector(state => {
-    return state.contacts.loading
+
+  const toggle = useSelector(state => {
+    return state.messages.toggle
   })
 
-
-  if(contactsLoading) {
-    return  <div/>
-  }
-  else return (
-      contact.map(contact=>{
+  return (
+      contact.map((contact, key)=>{
         return (
-          <div className={styles.container}>
+          <div className={`${styles.container} ${
+            toggle ? styles.slideout : ''
+          }`} key={key}>
           <ContactInfo contact={contact}/>
           <Social contact={contact}/>
           <Media contact={contact}/>

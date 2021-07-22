@@ -1,7 +1,33 @@
 .container {
-    width: 55%;
-    position: relative;
     overflow-y: scroll;
+    flex:1;
+}
+.slideout {
+    -webkit-transition: all .5s ease-in-out;
+    position: relative;
+    max-width: 55%;
+}
+.slideout .header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0edf7;
+    padding: 10px 0;
+    width:55%;
+    position: fixed;
+    z-index: 1000;
+    background-color: #fff;
+}
+.slideout .input_form {
+    border-top: 1px solid #f0edf7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 55%;
+    z-index: 1000;
+    background-color: #fff;
 }
 .container::-webkit-scrollbar {
     width:0;
@@ -12,10 +38,13 @@
     align-items: center;
     border-bottom: 1px solid #f0edf7;
     padding: 10px 0;
-    width: 55%;
+    width: 75%;
     position: fixed;
     z-index: 1000;
     background-color: #fff;
+}
+.loading {
+    padding-left: 5px;
 }
 .search_box{
     height: 40px;
@@ -24,7 +53,7 @@
     border-radius: 40px;
     display: flex;
     top: 5px;
-    left: 5px;
+    left: 10px;
     align-items: center;
     position: absolute;
 }
@@ -49,7 +78,10 @@
     justify-content: center;
     align-items: center;
     text-decoration:none;
-    background: none;
+    background: transparent;
+    border:none;
+    padding: 0;
+    outline: none;
     border-radius: 50%;
     float: left;
     transition: 0.4s ease;
@@ -67,6 +99,10 @@
 .contact_name {
     font-weight: 700;
     font-size: 18px;
+    text-align: center;
+}
+.loading {
+    margin-left: 50px ;
     text-align: center;
 }
 .slideout_btn {
@@ -219,7 +255,7 @@
     align-items: center;
     position: fixed;
     bottom: 0;
-    width: 55%;
+    width: 75%;
     z-index: 1000;
     background-color: #fff;
 }

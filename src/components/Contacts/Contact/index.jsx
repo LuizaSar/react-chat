@@ -3,6 +3,7 @@ import styles from '../Contacts.module.css'
 import { NavLink } from 'react-router-dom';
 
 function Contact (props) {
+
   return (
     <NavLink to={`/${props.contact._id}`} activeClassName={styles.contact_selected}>
     <li>
