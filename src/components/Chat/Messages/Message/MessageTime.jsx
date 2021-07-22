@@ -1,6 +1,9 @@
 import React from 'react';
 import styles from '../../Chat.module.css';
 import PropTypes from 'prop-types';
+import schedule from './assets/img/schedule_white_18dp.svg'
+import done_all from './assets/img/done_all_white_18dp.svg'
+import done from './assets/img/done_white_18dp.svg'
 
 function MessageTime(props) {
   const date = new Date().toISOString();
@@ -21,7 +24,7 @@ function MessageTime(props) {
       {props.message.sending ? (
         <div className={styles.message_sub}>
         <div className={styles.message_status}>
-          <div className="material-icons">schedule</div>
+          <img src={schedule} alt='' />
         </div>
         <div className={styles.message_time}>
           {new Date(date).toLocaleTimeString([], {
@@ -34,9 +37,9 @@ function MessageTime(props) {
         <div className={styles.message_sub}>
           <div className={styles.message_status}>
             {props.message.read ? (
-              <div className="material-icons">done_all</div>
+              <img src={done_all} alt='' />
             ) : (
-              <div className="material-icons">done</div>
+              <img src={done} alt='' />
             )}
           </div>
           <div className={styles.message_time}>

@@ -3,8 +3,8 @@ const initialState = {
   loading: false,
   addingMessage: false,
   deletingMessageId: null,
-  searchMessage:'',
-  toggle:false
+  searchMessage: '',
+  toggle: false,
 };
 
 export default function messages(state = initialState, action) {
@@ -66,13 +66,13 @@ export default function messages(state = initialState, action) {
     case 'messages/search/set':
       return {
         ...state,
-        searchMessage: action.payload
+        searchMessage: action.payload,
       };
     case 'toggle/set':
       return {
         ...state,
-        toggle:!(state.toggle)
-      }
+        toggle: !state.toggle,
+      };
 
     default:
       return state;

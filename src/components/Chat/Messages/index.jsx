@@ -24,11 +24,12 @@ function Messages (props) {
   })
   const filteredMessages = messages.filter((item) => {
     if (item.content.indexOf(search) > -1) {
-      return true;
+      return true
     }
-    return false;
-  });
+    return false
+    ;
 
+  });
   const loadingMessages = useSelector(state => {
     return state.messages.loading
   })

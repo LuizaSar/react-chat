@@ -1,7 +1,7 @@
 const initialState = {
-  items:[],
-  loading:false,
-  searchContact:''
+  items: [],
+  loading: false,
+  searchContact: '',
 };
 
 export default function contacts(state = initialState, action) {
@@ -9,25 +9,25 @@ export default function contacts(state = initialState, action) {
     case 'contacts/load/start':
       return {
         ...state,
-        loading: true
+        loading: true,
       };
     case 'contacts/load/success':
       return {
         ...state,
-        items:action.payload,
-        loading: false
-      }
+        items: action.payload,
+        loading: false,
+      };
     case 'contacts/search/set':
       return {
         ...state,
-        searchContact: action.payload
-      }
+        searchContact: action.payload,
+      };
     default:
       return state;
   }
 }
 
-export  function loadContacts() {
+export function loadContacts() {
   return (dispatch) => {
     dispatch({
       type: 'contacts/load/start',

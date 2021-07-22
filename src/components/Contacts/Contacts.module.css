@@ -1,112 +1,119 @@
 .container {
-    width: 25%;
-    background-color:#f0edf7;
-    position: relative;
-    overflow: auto;
+  width: 25%;
+  background-color: #f0edf7;
+  position: relative;
+  overflow: auto;
 }
 .container_loading {
-    width: 25%;
-    background-color:#f0edf7;
-    position: relative;
-    overflow: auto;
-    padding: 0 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 25%;
+  background-color: #f0edf7;
+  position: relative;
+  overflow: auto;
+  padding: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.root .svg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.root .svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
 }
 .container::-webkit-scrollbar-track {
-    background-color: rgb(224, 219, 219);
-    margin-top: 50px;
+  background-color: rgb(224, 219, 219);
+  margin-top: 50px;
 }
 .container::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #567FED 0.14%, #60DAFA 100%);
-    border-radius: 6px;
-    border: 1px solid rgb(224, 219, 219);
+  background: linear-gradient(180deg, #567fed 0.14%, #60dafa 100%);
+  border-radius: 6px;
+  border: 1px solid rgb(224, 219, 219);
 }
 .contacts_list {
-    margin-top: 60px;
-    list-style-type: none;
-    padding-left: 0;
-    margin-bottom: 0;
+  margin-top: 60px;
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 .search_form {
-    background-color:#f0edf7;
-    padding: 5px 10px;
-    width: 25%;
-    position: fixed;
-    top: 0;
-    left: 0;
+  background-color: #f0edf7;
+  padding: 5px 10px;
+  width: 25%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 .search_input {
-    font-size: 14px;
-    background-color:#fff;
-    border-radius: 10px;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-    color: #5a6674;
-    width:100%;
-    height: 20px;
-    padding: 20px 10px;
-    border: none;
-    outline: none;
+  font-size: 14px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  color: #5a6674;
+  width: 100%;
+  height: 20px;
+  padding: 20px 10px;
+  border: none;
+  outline: none;
 }
 .contact_wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all ease 0.3s;
-    padding: 10px 10px;
-    text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all ease 0.3s;
+  padding: 10px 10px;
+  text-decoration: none;
 }
 .contact_wrap:hover {
-    background-color: #d9d9d9;
-    cursor: pointer;
+  background-color: #d9d9d9;
+  cursor: pointer;
 }
-.contact_selected li{
-    background-color: #d9d9d9;
+.contact_selected li {
+  background-color: #d9d9d9;
 }
 .contact_img {
-    border-radius: 50px;
-    font-size: 30px;
-    padding: 0 25px;
-    height: 60px;
-    background-image: linear-gradient(to right bottom, #98d7ff, #47baff, #0099ff, #0073ff, #0043ff);
-    width: 60px;
-    color: #fff;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+  border-radius: 50px;
+  font-size: 30px;
+  padding: 0 25px;
+  height: 60px;
+  background-image: linear-gradient(
+    to right bottom,
+    #98d7ff,
+    #47baff,
+    #0099ff,
+    #0073ff,
+    #0043ff
+  );
+  width: 60px;
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 .contact_main {
-    width: 100%;
-    padding: 0 5px 0 15px;
+  width: 100%;
+  padding: 0 5px 0 15px;
 }
 .contact_name {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 18px;
-    margin-bottom: 5px;
-    color: #2d2d2e;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  margin-bottom: 5px;
+  color: #2d2d2e;
 }
 .contact_text {
-    color: #4a4a4a;
-    width: 130px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  color: #4a4a4a;
+  width: 130px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.contact_time  {
-    font-size: 14px;
-    color: #4a4a4a;
+.contact_time {
+  font-size: 14px;
+  color: #4a4a4a;
 }

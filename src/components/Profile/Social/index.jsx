@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from '../Profile.module.css'
+import styles from '../Profile.module.css';
 import { AiFillFacebook, AiOutlineTwitter, FiInstagram } from 'react-icons/all';
 import PropTypes from 'prop-types';
 
-function Social (props) {
+function Social(props) {
   return (
     <div>
       <div className={styles.social_title}>Social</div>
@@ -13,11 +13,11 @@ function Social (props) {
           <span className={styles.social_name}>{props.contact.username}</span>
         </div>
         <div className={styles.social_wrap}>
-          <AiOutlineTwitter className={styles.social_twitter}/>
+          <AiOutlineTwitter className={styles.social_twitter} />
           <span className={styles.social_name}>{props.contact.username}</span>
         </div>
         <div className={styles.social_wrap}>
-          <AiFillFacebook className={styles.social_facebook}/>
+          <AiFillFacebook className={styles.social_facebook} />
           <span className={styles.social_name}>{props.contact.username}</span>
         </div>
       </div>

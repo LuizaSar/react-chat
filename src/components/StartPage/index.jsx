@@ -1,10 +1,12 @@
 import React from 'react';
-import styles from '../StartPage/StartPage.module.css'
+import styles from '../StartPage/StartPage.module.css';
 
-function StartPage (props) {
+function StartPage(props) {
   return (
     <div className={styles.start_page}>
-      <div className={styles.start_page_text}>Select a chat to start messaging</div>
+      <div className={styles.start_page_text}>
+        Select a chat to start messaging
+      </div>
     </div>
   );
 }
