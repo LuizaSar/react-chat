@@ -93,7 +93,7 @@ export function loadMessages(myId, contactId) {
           type: 'messages/load/success',
           payload: json,
         });
-      });
+      })
   };
 }
 
