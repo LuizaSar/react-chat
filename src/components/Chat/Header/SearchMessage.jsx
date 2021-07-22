@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../Chat.module.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { setSearchMessage } from '../../../redux/ducks/messages';
-
+import search_img from './assets/img/search_white_24dp.svg'
 
 function SearchMessage (props) {
   const dispatch = useDispatch();
@@ -25,7 +25,7 @@ function SearchMessage (props) {
         onChange={handleSearch}
       />
         <button className={styles.search_btn}>
-          <div className='material-icons'>search</div>
+          <img src={search_img} alt='' />
         </button>
     </div>
     </div>

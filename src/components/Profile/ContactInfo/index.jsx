@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../Profile.module.css'
+import PropTypes from 'prop-types';
 
 function ContactInfo (props) {
   return (
@@ -24,4 +25,7 @@ function ContactInfo (props) {
   );
 }
 
+ContactInfo.propTypes = {
+  contact: PropTypes.object.isRequired,
+};
 export default ContactInfo;

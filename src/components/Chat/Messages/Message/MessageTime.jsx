@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../../Chat.module.css';
+import PropTypes from 'prop-types';
 
 function MessageTime(props) {
   const date = new Date().toISOString();
@@ -49,5 +50,11 @@ function MessageTime(props) {
     </div>
   );
 }
+
+
+MessageTime.propTypes = {
+  message: PropTypes.object.isRequired,
+  myId: PropTypes.string.isRequired,
+};
 
 export default MessageTime;

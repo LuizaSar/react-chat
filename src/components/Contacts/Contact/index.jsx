@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from '../Contacts.module.css'
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 
 function Contact (props) {
 
@@ -23,5 +25,9 @@ function Contact (props) {
     </NavLink>
   );
 }
+
+Contact.propTypes = {
+  contact: PropTypes.object.isRequired,
+};
 
 export default Contact;

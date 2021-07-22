@@ -3,6 +3,7 @@ import styles from '../Contacts.module.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { setSearchContact } from '../../../redux/ducks/contacts';
 
+
 function SearchContact (props) {
   const dispatch = useDispatch();
 

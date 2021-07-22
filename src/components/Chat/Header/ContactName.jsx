@@ -1,11 +1,21 @@
 import React from 'react';
-import styles from '../Chat.module.css'
+import styles from '../Chat.module.css';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import { makeStyles } from '@material-ui/core/styles';
 
-function ContactName (props) {
+function ContactName(props) {
+  const contactId = useParams().id;
+  const contacts = useSelector((state) => {
+    return state.contacts.items;
+  });
+  const contactName = contacts.filter((contact) => {
+    return contactId === contact._id;
+  });
+  const loadingMessages = useSelector((state) => {
+    return state.messages.loading;
+  });
   const useStyles = makeStyles((theme) => ({
     root: {
       width: '100%',
@@ -16,32 +26,20 @@ function ContactName (props) {
   }));
   const classes = useStyles();
 
-  const contactId = useParams().id;
-  const contacts = useSelector(state => {
-    return state.contacts.items
-  })
-  const contactName = contacts.filter(contact=>{
-    if(contactId === contact._id) {
-      return true
-    }
-    return false
-  })
-  const loadingMessages = useSelector(state => {
-    return state.messages.loading
-  })
-  if(loadingMessages) {
-    return  (
-      <div className={classes.root} >
+  if (loadingMessages) {
+    return (
+      <div className={classes.root}>
         <div className={styles.loading}>
-          <LinearProgress /> 
+          <LinearProgress />
         </div>
-    </div>)
+      </div>
+    );
   }
   return (
     <div className={styles.contact_name}>
-      {contactName.map((item=>{
-        return item.fullname
-      }))}
+      {contactName.map((item) => {
+        return item.fullname;
+      })}
     </div>
   );
 }

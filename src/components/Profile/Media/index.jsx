@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../Profile.module.css'
+import PropTypes from 'prop-types';
 
 function Media (props) {
   return (
@@ -17,4 +18,7 @@ function Media (props) {
   );
 }
 
+Media.propTypes = {
+  contact: PropTypes.object.isRequired,
+};
 export default Media;

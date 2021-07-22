@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../Profile.module.css'
 import { AiFillFacebook, AiOutlineTwitter, FiInstagram } from 'react-icons/all';
-
+import PropTypes from 'prop-types';
 
 function Social (props) {
   return (
@@ -25,4 +25,7 @@ function Social (props) {
   );
 }
 
+Social.propTypes = {
+  contact: PropTypes.object.isRequired,
+};
 export default Social;

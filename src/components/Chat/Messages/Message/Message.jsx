@@ -3,6 +3,8 @@ import styles from '../../Chat.module.css';
 import { deleteMessage } from '../../../../redux/ducks/messages';
 import { useDispatch, useSelector } from 'react-redux';
 import MessageTime from './MessageTime';
+import PropTypes from 'prop-types';
+
 
 function Message(props) {
   const dispatch = useDispatch();
@@ -74,5 +76,12 @@ function Message(props) {
     </div>
   );
 }
+
+
+Message.propTypes = {
+  message: PropTypes.object.isRequired,
+  myId: PropTypes.string.isRequired,
+  contactId:PropTypes.string.isRequired,
+};
 
 export default Message;

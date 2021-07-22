@@ -3,7 +3,21 @@
     background-color:#f0edf7;
     position: relative;
     overflow: auto;
+}
+.container_loading {
+    width: 25%;
+    background-color:#f0edf7;
+    position: relative;
+    overflow: auto;
     padding: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.root .svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .container::-webkit-scrollbar {
     width: 8px;
@@ -51,7 +65,7 @@ a {
     justify-content: space-between;
     align-items: center;
     transition: all ease 0.3s;
-    padding: 10px 5px;
+    padding: 10px 10px;
     text-decoration: none;
 }
 .contact_wrap:hover {

@@ -4,6 +4,7 @@ import SearchContact from './SearchContact';
 import Contact from './Contact';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadContacts } from '../../redux/ducks/contacts';
+import { CircularProgress } from '@material-ui/core';
 
 function Contacts (props) {
   const dispatch = useDispatch();
@@ -14,6 +15,9 @@ function Contacts (props) {
 
   const contacts = useSelector(state => {
     return state.contacts.items
+  })
+  const loading = useSelector(state => {
+    return state.contacts.loading
   })
   const search = useSelector(state => {
     return state.contacts.searchContact
@@ -26,9 +30,17 @@ function Contacts (props) {
     return false;
   });
 
+  if(loading) {
+    return (
+      <div className={styles.container_loading}>
+        <SearchContact/>
+      <CircularProgress />
+      </div>
+    )
+  }
   return (
     <div className={styles.container}>
-      <SearchContact contacts={contacts}/>
+      <SearchContact/>
       <ul className={styles.contacts_list}>
         {filteredContacts.map((contact, key)=>{
           return (

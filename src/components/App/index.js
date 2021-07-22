@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import styles from './App.module.css'
+import styles from './App.module.css';
 import Contacts from '../Contacts';
 import Chat from '../Chat';
 import Profile from '../Profile';
@@ -8,26 +8,24 @@ import { useDispatch } from 'react-redux';
 import { loadProfile } from '../../redux/ducks/application';
 import StartPage from '../StartPage';
 
-
 function App(props) {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(loadProfile())
+    dispatch(loadProfile());
   }, [dispatch]);
 
   return (
     <div className={styles.container}>
       <Route exact path={'/'}>
-        <Contacts/>
-        <StartPage/>
+        <Contacts />
+        <StartPage />
       </Route>
       <Route exact path={'/:id'}>
-        <Contacts/>
-        <Chat/>
-        <Profile/>
+        <Contacts />
+        <Chat />
+        <Profile />
       </Route>
     </div>
-
   );
 }
 
