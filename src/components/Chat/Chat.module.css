@@ -87,6 +87,10 @@
   transition: 0.4s ease;
   color: #fff;
 }
+.search_btn img {
+    width: 24px;
+    height: 24px;
+}
 .search_box:hover > .search_input {
   width: 150px;
   margin: 0 8px;
