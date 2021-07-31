@@ -4,7 +4,7 @@ import { setToggle } from '../../../redux/ducks/messages';
 import { useDispatch } from 'react-redux';
 import account_img from './assets/img/account_circle_black_24dp.svg';
 
-function SlideOut(props) {
+function SlideOut() {
   const dispatch = useDispatch();
 
   const handleSetToggle = () => {

@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import Message from './Message/Message';
 
 
-function Messages (props) {
+function Messages () {
   const dispatch = useDispatch();
   const contactId = useParams().id;
   const myId = useSelector(state => {
@@ -16,23 +16,15 @@ function Messages (props) {
     dispatch(loadMessages(myId, contactId));
   }, [dispatch, contactId, myId]);
 
-  const messages = useSelector(state => {
-    return state.messages.items
-  })
-  const search = useSelector(state => {
-    return state.messages.searchMessage
-  })
-  const filteredMessages = messages.filter((item) => {
-    if (item.content.indexOf(search) > -1) {
-      return true
-    }
-    return false
-    ;
+  const [messages, search, loadingMessages] = useSelector((state) => [
+    state.messages.items,
+    state.messages.searchMessage,
+    state.messages.loading,
+  ]);
 
+  const filteredMessages = messages.filter((item) => {
+    return item.content.toLowerCase().indexOf(search.toLowerCase()) > -1;
   });
-  const loadingMessages = useSelector(state => {
-    return state.messages.loading
-  })
 
   if(loadingMessages) {
     return  (

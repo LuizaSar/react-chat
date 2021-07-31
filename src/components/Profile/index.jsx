@@ -6,7 +6,7 @@ import Media from './Media';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
-function Profile(props) {
+function Profile() {
   const contactId = useParams().id;
   const contacts = useSelector((state) => {
     return state.contacts.items;

@@ -4,7 +4,7 @@ import SearchMessage from './SearchMessage';
 import ContactName from './ContactName';
 import SlideOut from './SlideOut';
 
-function Header (props) {
+function Header () {
   return (
     <div className={styles.header_wrap}>
       <SearchMessage/>

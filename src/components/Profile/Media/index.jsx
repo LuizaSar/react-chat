@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from '../Profile.module.css';
-import PropTypes from 'prop-types';
 
-function Media(props) {
+function Media() {
   return (
     <div>
       <div className={styles.media_title}>Media</div>
@@ -19,7 +18,5 @@ function Media(props) {
   );
 }
 
-Media.propTypes = {
-  contact: PropTypes.object.isRequired,
-};
+
 export default Media;

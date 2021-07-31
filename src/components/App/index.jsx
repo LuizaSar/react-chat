@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 import { loadProfile } from '../../redux/ducks/application';
 import StartPage from '../StartPage';
 
-function App(props) {
+function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadProfile());

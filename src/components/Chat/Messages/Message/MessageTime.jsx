@@ -5,14 +5,13 @@ import schedule from './assets/img/schedule_white_18dp.svg'
 import done_all from './assets/img/done_all_white_18dp.svg'
 import done from './assets/img/done_white_18dp.svg'
 
-function MessageTime(props) {
+function MessageTime({ message, myId }) {
   const date = new Date().toISOString();
 
-
-  if (props.myId === props.message.toUserId) {
+  if (myId === message.toUserId) {
     return (
       <div className={styles.message_time}>
-        {new Date(props.message.time).toLocaleTimeString([], {
+        {new Date(message.time).toLocaleTimeString([], {
           hour: '2-digit',
           minute: '2-digit',
         })}
@@ -21,7 +20,7 @@ function MessageTime(props) {
   }
   return (
     <div>
-      {props.message.sending ? (
+      {message.sending ? (
         <div className={styles.message_sub}>
         <div className={styles.message_status}>
           <img src={schedule} alt='' />
@@ -36,14 +35,14 @@ function MessageTime(props) {
       ) : (
         <div className={styles.message_sub}>
           <div className={styles.message_status}>
-            {props.message.read ? (
+            {message.read ? (
               <img src={done_all} alt='' />
             ) : (
               <img src={done} alt='' />
             )}
           </div>
           <div className={styles.message_time}>
-            {new Date(props.message.time).toLocaleTimeString([], {
+            {new Date(message.time).toLocaleTimeString([], {
               hour: '2-digit',
               minute: '2-digit',
             })}

@@ -5,7 +5,7 @@ import Messages from './Messages';
 import InputField from './InputField';
 import { useSelector } from 'react-redux';
 
-function Chat(props) {
+function Chat() {
   const toggle = useSelector((state) => {
     return state.messages.toggle;
   });

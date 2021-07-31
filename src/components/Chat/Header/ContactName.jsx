@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import { makeStyles } from '@material-ui/core/styles';
 
-function ContactName(props) {
+function ContactName() {
   const contactId = useParams().id;
   const contacts = useSelector((state) => {
     return state.contacts.items;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../StartPage/StartPage.module.css';
 
-function StartPage(props) {
+function StartPage() {
   return (
     <div className={styles.start_page}>
       <div className={styles.start_page_text}>

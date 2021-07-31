@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setSearchMessage } from '../../../redux/ducks/messages';
 import search_img from './assets/img/search_white_24dp.svg';
 
-function SearchMessage(props) {
+function SearchMessage() {
   const dispatch = useDispatch();
 
   const search = useSelector((state) => {

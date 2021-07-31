@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { addMessage } from '../../../redux/ducks/messages';
 
-function InputField(props) {
+function InputField() {
   const dispatch = useDispatch();
   const contactId = useParams().id;
   const myId = useSelector((state) => {

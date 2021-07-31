@@ -6,7 +6,7 @@ import MessageTime from './MessageTime';
 import PropTypes from 'prop-types';
 
 
-function Message(props) {
+function Message({ message, myId, contactId }) {
   const dispatch = useDispatch();
   const messagesEndRef = useRef(null);
 
@@ -29,7 +29,7 @@ function Message(props) {
     return state.contacts.items;
   });
   const contactName = contacts.filter((contact) => {
-    if (props.contactId === contact._id) {
+    if (contactId === contact._id) {
       return true;
     }
     return false;
@@ -38,17 +38,17 @@ function Message(props) {
   return (
     <div
       className={`${styles.message_block} ${
-        deleting === props.message._id ? styles.fade_out : ''
+        deleting === message._id ? styles.fade_out : ''
       }`}
     >
       <div
         className={`${
-          props.myId === props.message.toUserId
+          myId === message.toUserId
             ? styles.message_incoming
             : styles.message_outgoing
         } `}
       >
-        {props.myId === props.message.toUserId ? (
+        {myId === message.toUserId ? (
           <div className={styles.message_avatar}>
             {contactName.map((item) => {
               return item.fullname.substring(0, 1);
@@ -57,19 +57,19 @@ function Message(props) {
         ) : null}
         <div
           className={`${
-            props.myId === props.message.toUserId
+            myId === message.toUserId
               ? styles.incoming_message_body
               : styles.outgoing_message_body
           } `}
         >
           <button
             className={styles.delete}
-            onClick={() => handleDeleteMessage(props.message._id)}
+            onClick={() => handleDeleteMessage(message._id)}
           >
             ❌
           </button>
-          <div className={styles.message_text}>{props.message.content}</div>
-          <MessageTime message={props.message} myId={props.myId} />
+          <div className={styles.message_text}>{message.content}</div>
+          <MessageTime message={message} myId={myId} />
         </div>
       </div>
       <div ref={messagesEndRef} />

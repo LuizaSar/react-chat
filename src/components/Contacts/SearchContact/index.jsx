@@ -3,11 +3,11 @@ import styles from '../Contacts.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { setSearchContact } from '../../../redux/ducks/contacts';
 
-function SearchContact(props) {
+function SearchContact() {
   const dispatch = useDispatch();
 
   const search = useSelector((state) => {
-    return state.contacts.searchContact;
+    return  state.contacts.searchContact;
   });
   const handleSearch = (event) => {
     dispatch(setSearchContact(event.target.value));
