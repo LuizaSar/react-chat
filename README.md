@@ -18,7 +18,7 @@
 * Выбор чата
 * Профиль активного чата
 
-### При разработке ипользованы:
+### При разработке использованы:
 * JavaScript / React
 * Redux / Redux-thunk / Redux-logger
 * React-router-dom 
